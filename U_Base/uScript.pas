@@ -4,7 +4,7 @@ interface
 
 uses
   SysUtils, Windows, Classes, DataStructs, uKeys, MyStrings, Resources,
-  uGameSubs, Regexpr, Forms, uUnitRecs, Math;
+  uGameSubs, Forms, uUnitRecs, Math;
 
 var
   TerminatedQuery: function: boolean of object;
@@ -68,7 +68,7 @@ type
   end;
 
 var
-  Regex: TRegexpr;
+  //Regex: TRegexpr;
   Variables: TStrings;
   ScriptArgs: TStringArray;
   POutFrom, POutTo: ^integer;
@@ -533,32 +533,33 @@ begin
   // Context symbols
 
   // Regex context
-  if Context.ClassType = TRegExpr then begin
-
-     if ArgsToken(id, 'exec', 2) then begin
-       Regex.Expression := args[0];
-       if Regex.Exec(args[1]) then
-         Result := IntToStr(Regex.SubExprMatchCount+1)
-       else Result := '';
-     end
-     else if NumArgToken(id, 'match', 0, Regex.SubExprMatchCount) then
-       Result := RegEx.Match[ToInt(args[0])]
-     else if NumArgToken(id, 'matchpos', 0, Regex.SubExprMatchCount) then
-       Result := IntToStr(RegEx.MatchPos[ToInt(args[0])])
-     else if id = 'execnext' then begin
-       if Regex.ExecNext then Result := IntToStr(Regex.SubExprMatchCount+1)
-       else Result := '';
-     end
-     else if ArgsToken(id, 'replace', 3) then begin
-       Regex.Expression := args[1];
-       Result := Regex.Replace(args[0], args[2], True);
-     end
-     else found := False;
-
-  end
+//  if Context.ClassType = TRegExpr then begin
+//
+//     if ArgsToken(id, 'exec', 2) then begin
+//       Regex.Expression := args[0];
+//       if Regex.Exec(args[1]) then
+//         Result := IntToStr(Regex.SubExprMatchCount+1)
+//       else Result := '';
+//     end
+//     else if NumArgToken(id, 'match', 0, Regex.SubExprMatchCount) then
+//       Result := RegEx.Match[ToInt(args[0])]
+//     else if NumArgToken(id, 'matchpos', 0, Regex.SubExprMatchCount) then
+//       Result := IntToStr(RegEx.MatchPos[ToInt(args[0])])
+//     else if id = 'execnext' then begin
+//       if Regex.ExecNext then Result := IntToStr(Regex.SubExprMatchCount+1)
+//       else Result := '';
+//     end
+//     else if ArgsToken(id, 'replace', 3) then begin
+//       Regex.Expression := args[1];
+//       Result := Regex.Replace(args[0], args[2], True);
+//     end
+//     else found := False;
+//
+//  end
 
   // Region context
-  else if Context.ClassType = TRegion then begin
+  //else
+  if Context.ClassType = TRegion then begin
     with TRegion(Context) do begin
 
       if      id = 'x'       then Result := IntToStr(X)
@@ -880,7 +881,7 @@ begin
     else if ArgToken(id, 'eval') then Result := EvalExpression(args[0])
 
     // Context functions
-    else if id = 'regex' then Context := Regex
+    //else if id = 'regex' then Context := TRegEx //Regex
     else if NumArgToken(id, 'unit', 0, MaxInt) then begin
       Context := FindUnit(ToInt(args[0]));
       if Context <> nil then Result := TUnit(Context).NumStr;
@@ -1559,10 +1560,10 @@ end;
 
 initialization
   Scripts := TStringList.Create;
-  Regex := TRegExpr.Create;
+  //Regex := TRegExpr.Create;
 
 finalization
   Scripts.Free;
-  Regex.Free;
+  //Regex.Free;
 
 end.

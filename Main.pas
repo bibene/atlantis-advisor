@@ -6,12 +6,13 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Math,
   StdCtrls, ImgList, IniFiles, Clipbrd, ActnList, Menus,
   CylinderMap, ComCtrls, ToolWin, ExtCtrls, Buttons, Grids,
-  uKeys, MyStrings, DataStructs, Resources, PowerGrid, uManager, uHexMap,
+  uKeys, MyStrings, DataStructs, Resources, uManager, uHexMap,
   uVisualOrders, uOrderProcessor, uListFilter, AtlaDate, uGameSubs, uAvatars, ShellApi,
   uMail, uExport, uScript, uInterface, IntEdit, uTurnEvents, uUnitRecs,
   RepRead, uHistory, uSpecEdit, uTerrEdit, uTradeStructs, uTaxTrade,
   uUnitArmies, uRegionStat, uSpyReps, uUnitProduction, uGameStart,
-  uUnitFilter, uShortcuts, uRoute, uGates, uItemStats, uWantedItems;
+  uUnitFilter, uShortcuts, uRoute, uGates, uItemStats, uWantedItems,
+  System.Actions, PowerGrid;
 
 const
   crMove = crHandPoint;
@@ -855,7 +856,6 @@ var Base: string;
 begin
   Application.OnMessage := AppMessage;
   State := State + [asFirstActivate];
-  DecimalSeparator := '.';
   Base := ExtractFilePath(Application.ExeName);
   Filter.Skills := TSkillList.Create;
   Filter.Items := TItemDataList.Create;

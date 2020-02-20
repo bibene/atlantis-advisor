@@ -55,13 +55,11 @@ object ManagerOptionsForm: TManagerOptionsForm
       Height = 13
       Caption = 'Path to executable:'
     end
-    object eEngineFile: TFilenameEdit
+    object eEngineFile: TEdit
       Left = 12
       Top = 44
       Width = 293
       Height = 21
-      Filter = 'Executable files (*.exe)|*.exe|All files (*.*)|*.*'
-      NumGlyphs = 1
       TabOrder = 0
     end
   end

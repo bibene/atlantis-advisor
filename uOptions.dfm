@@ -50,21 +50,27 @@ object OptionForm: TOptionForm
     ActivePage = TabSheet4
     Align = alTop
     Anchors = [akLeft, akTop, akRight, akBottom]
-    TabIndex = 1
     TabOrder = 2
     object TabSheet1: TTabSheet
       Caption = 'Current game'
       ImageIndex = 32
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object pcGame: TPageControl
         Left = 4
         Top = 8
         Width = 469
         Height = 361
         ActivePage = TabSheet7
-        TabIndex = 0
         TabOrder = 0
         object TabSheet7: TTabSheet
           Caption = 'Details'
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object Label14: TLabel
             Left = 12
             Top = 20
@@ -293,7 +299,6 @@ object OptionForm: TOptionForm
             Width = 189
             Height = 21
             Style = csDropDownList
-            ItemHeight = 13
             TabOrder = 11
             Items.Strings = (
               '50% soldiers died'
@@ -306,7 +311,6 @@ object OptionForm: TOptionForm
             Width = 89
             Height = 21
             Style = csDropDownList
-            ItemHeight = 13
             TabOrder = 12
             OnChange = FPChange
             Items.Strings = (
@@ -318,6 +322,10 @@ object OptionForm: TOptionForm
         object TabSheet9: TTabSheet
           Caption = 'Faction Points'
           ImageIndex = 2
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object lFpAmount: TLabel
             Left = 312
             Top = 199
@@ -354,6 +362,10 @@ object OptionForm: TOptionForm
         object TabSheet8: TTabSheet
           Caption = 'Map settings'
           ImageIndex = 1
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object GroupBox2: TGroupBox
             Left = 8
             Top = 10
@@ -623,16 +635,23 @@ object OptionForm: TOptionForm
     object TabSheet4: TTabSheet
       Caption = 'Environment'
       ImageIndex = 5
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object pcEnvironment: TPageControl
         Left = 4
         Top = 8
         Width = 469
         Height = 361
         ActivePage = TabSheet5
-        TabIndex = 3
         TabOrder = 0
         object TabSheet2: TTabSheet
           Caption = 'Main Window'
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object GroupBox4: TGroupBox
             Left = 4
             Top = 8
@@ -693,7 +712,6 @@ object OptionForm: TOptionForm
               Width = 97
               Height = 21
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 3
               Items.Strings = (
                 'Full name'
@@ -929,6 +947,10 @@ object OptionForm: TOptionForm
         object TabSheet3: TTabSheet
           Caption = 'Bookmarks'
           ImageIndex = 1
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object lbBookmarks: TListBox
             Left = 8
             Top = 16
@@ -950,6 +972,10 @@ object OptionForm: TOptionForm
         object TabSheet6: TTabSheet
           Caption = 'FORM Templates'
           ImageIndex = 3
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object mFormTemplate: TMemo
             Left = 8
             Top = 16
@@ -964,7 +990,6 @@ object OptionForm: TOptionForm
             Width = 221
             Height = 21
             Style = csDropDownList
-            ItemHeight = 0
             TabOrder = 1
             OnChange = cmFormTemplateChange
           end
@@ -981,6 +1006,10 @@ object OptionForm: TOptionForm
         object TabSheet5: TTabSheet
           Caption = 'Shortcuts'
           ImageIndex = 2
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 0
+          ExplicitHeight = 0
           object lMessage: TLabel
             Left = 208
             Top = 280
@@ -1037,7 +1066,6 @@ object OptionForm: TOptionForm
     end
   end
   object ColorDialog: TColorDialog
-    Ctl3D = True
     Left = 4
     Top = 404
   end

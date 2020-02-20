@@ -19,7 +19,7 @@ begin
   GetMem(pSender , SizeOf(TMapiRecipDesc));
   with pSender^ do begin
     lpszName := '';
-    lpszAddress := PChar(Sender);
+    lpszAddress := PAnsiChar(Sender);
     ulEIDSize := 0;
     lpEntryID := nil;
     ulReserved := 0;
@@ -29,7 +29,7 @@ begin
   GetMem(pRecip , SizeOf(TMapiRecipDesc));
   with pRecip^ do begin
     lpszName := '';
-    lpszAddress := PChar(Recipient);
+    lpszAddress := PAnsiChar(Recipient);
     ulEIDSize := 0;
     lpEntryID := nil;
     ulReserved := 0;
@@ -38,8 +38,8 @@ begin
 
   with Msg do begin
     ulReserved := 0;
-    lpszSubject := PChar(Subject);
-    lpszNoteText := PChar(Text);
+    lpszSubject := PAnsiChar(Subject);
+    lpszNoteText := PAnsiChar(Text);
     lpOriginator := pSender;
     nRecipCount := 1;
     lpRecips := pRecip;

@@ -1,0 +1,276 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{438A6CC8-B9C8-402B-B4BE-0A3C7D88EECA}</ProjectGuid>
+        <MainSource>advisor.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>18.8</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_E>false</DCC_E>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_N>true</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <DCC_DcuOutput>dcu</DCC_DcuOutput>
+        <DCC_UnitSearchPath>D:\Advisor\Recover\U_Base;D:\Advisor\Recover\U_Orders;D:\Advisor\Recover\U_Manager;D:\Advisor\Recover\U_Tools;D:\Libs\regexpr;D:\Libs\RxD6\Units;D:\Libs\MemoEx\Source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UsePackage>vcl;rtl;dbrtl;adortl;vcldb;vclx;bdertl;vcldbx;ibxpress;dsnap;cds;bdecds;qrpt;teeui;teedb;tee;dss;teeqr;visualclx;visualdbclx;dsnapcrba;dsnapcon;VclSmp;vclshlctrls;vclie;xmlrtl;inet;inetdbbde;inetdbxpress;inetdb;nmfast;webdsnap;websnap;dbexpress;dbxcds;indy;dclOffice2k;RxCtl6;$(DCC_UsePackage)</DCC_UsePackage>
+        <SanitizedProjectName>advisor</SanitizedProjectName>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1049</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>advisor_Icon.ico</Icon_MainIcon>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>advisor_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="Main.pas">
+            <Form>MainForm</Form>
+        </DCCReference>
+        <DCCReference Include="uAbout.pas">
+            <Form>AboutForm</Form>
+        </DCCReference>
+        <DCCReference Include="Resources.pas">
+            <Form>ResForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Orders\uOrderProcessor.pas"/>
+        <DCCReference Include="U_Orders\uVisualOrders.pas"/>
+        <DCCReference Include="U_Base\uGameSubs.pas"/>
+        <DCCReference Include="U_Base\DataStructs.pas"/>
+        <DCCReference Include="uHexMap.pas"/>
+        <DCCReference Include="U_Base\uKeys.pas"/>
+        <DCCReference Include="U_Base\RepRead.pas"/>
+        <DCCReference Include="U_Base\uHistory.pas"/>
+        <DCCReference Include="U_Base\uInterface.pas"/>
+        <DCCReference Include="U_Base\uScript.pas"/>
+        <DCCReference Include="U_Base\uAvatars.pas"/>
+        <DCCReference Include="U_Manager\uManager.pas">
+            <Form>ManagerForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uMapExport.pas">
+            <Form>MapExportForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Orders\uOrders.pas"/>
+        <DCCReference Include="U_Base\uUnitRecs.pas"/>
+        <DCCReference Include="uBattle.pas">
+            <Form>BattleForm</Form>
+        </DCCReference>
+        <DCCReference Include="uOptions.pas">
+            <Form>OptionForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uSoldiers.pas">
+            <Form>SoldiersForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\uExport.pas"/>
+        <DCCReference Include="uListFilter.pas">
+            <Form>ListFilterForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\uAnalyzers.pas"/>
+        <DCCReference Include="U_Tools\uSkillEdit.pas">
+            <Form>SkillEditForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uSpecEdit.pas">
+            <Form>SpecEditForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uItemEdit.pas">
+            <Form>ItemEditForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uStructEdit.pas">
+            <Form>StructEditForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\uArmy.pas"/>
+        <DCCReference Include="U_Tools\uUnitArmies.pas">
+            <Form>UArmyForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\MyStrings.pas"/>
+        <DCCReference Include="U_Tools\uUnitProduction.pas">
+            <Form>UnitProductionForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uUnitFilter.pas">
+            <Form>UnitFilterForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uSpyReps.pas">
+            <Form>SpyRepForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\uNeeds.pas"/>
+        <DCCReference Include="U_Tools\uUnitNeeds.pas">
+            <Form>UnitNeedsForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Orders\uNewUnit.pas">
+            <Form>NewUnitForm</Form>
+        </DCCReference>
+        <DCCReference Include="uShortcuts.pas"/>
+        <DCCReference Include="U_Tools\uTerrEdit.pas">
+            <Form>TerrEditForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\uRoute.pas"/>
+        <DCCReference Include="Libs\Wredosoft\CylinderMap.pas"/>
+        <DCCReference Include="Libs\Wredosoft\IntEdit.pas"/>
+        <DCCReference Include="Libs\Wredosoft\ImageBtn.pas"/>
+        <DCCReference Include="Libs\Wredosoft\ColorBtn.pas"/>
+        <DCCReference Include="Libs\Wredosoft\Painter.pas"/>
+        <DCCReference Include="U_Tools\uFactions.pas">
+            <Form>FactionForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Orders\uTeach.pas">
+            <Form>TeachForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\uGameStart.pas"/>
+        <DCCReference Include="uMiniMap.pas">
+            <Form>MiniMapForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uTurnEvents.pas">
+            <Form>TurnEventsForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uTownTrade.pas">
+            <Form>TownTradeForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\uBattleDraw.pas"/>
+        <DCCReference Include="U_Tools\uTaxTrade.pas">
+            <Form>TaxTradeForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uScriptEdit.pas">
+            <Form>ScriptEditForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uWantedItems.pas">
+            <Form>WantedItemsForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Tools\uAvatarEdit.pas">
+            <Form>AvatarForm</Form>
+        </DCCReference>
+        <DCCReference Include="U_Base\uPathFind.pas"/>
+        <DCCReference Include="U_Base\AtlaDate.pas"/>
+        <DCCReference Include="U_Manager\uNewGame.pas"/>
+        <DCCReference Include="U_Manager\uMgrOptions.pas"/>
+        <DCCReference Include="U_Orders\uSelAmount.pas"/>
+        <DCCReference Include="U_Orders\uClaim.pas"/>
+        <DCCReference Include="U_Orders\uBuy.pas"/>
+        <DCCReference Include="U_Base\uMail.pas"/>
+        <DCCReference Include="U_Tools\uTradeStructs.pas"/>
+        <DCCReference Include="U_Tools\uRegionStat.pas"/>
+        <DCCReference Include="U_Tools\uGates.pas"/>
+        <DCCReference Include="U_Tools\uItemStats.pas"/>
+        <DCCReference Include="U_Tools\uMemo.pas"/>
+        <DCCReference Include="U_Base\RegCode.pas"/>
+        <DCCReference Include="U_Base\uRegistration.pas">
+            <Form>RegForm</Form>
+        </DCCReference>
+        <DCCReference Include="Libs\Wredosoft\PowerGrid.pas"/>
+        <DCCReference Include="Libs\MemoEx\MemoEx.pas"/>
+        <DCCReference Include="Libs\MemoEx\MemoExScrollBar.pas"/>
+        <DCCReference Include="Libs\MemoEx\MemoExXPCompat.pas"/>
+        <DCCReference Include="Libs\MemoEx\MemoExClipUtils.pas"/>
+        <None Include="english.key">
+            <ContainerId>File</ContainerId>
+        </None>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">advisor.dpr</Source>
+                </Source>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

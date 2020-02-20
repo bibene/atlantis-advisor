@@ -45,7 +45,7 @@ begin
       begin
         s := SelText;
         _WText := GlobalLock(Data);
-        if FontCharset = OEM_CHARSET then OEMToChar(PChar(s), PChar(s));
+        if FontCharset = OEM_CHARSET then OEMToChar(PAnsiChar(s), PChar(s));
         StringToWideChar(s, _WText, size);
       end
       else
@@ -109,9 +109,9 @@ begin
         begin
           if fmtUnicode then Txt := WideCharToString(_WideText)
           else Txt := StrPas(_Text);
-          if (FontCharset = OEM_CHARSET) and (fmt <> CF_OEMTEXT) then CharToOEM(PChar(Txt), PChar(Txt))
+          if (FontCharset = OEM_CHARSET) and (fmt <> CF_OEMTEXT) then CharToOEM(PChar(Txt), PAnsiChar(Txt))
           else
-            if (FontCharset = DEFAULT_CHARSET) and (fmt = CF_OEMTEXT) then OEMToChar(PChar(Txt), PChar(Txt));
+            if (FontCharset = DEFAULT_CHARSET) and (fmt = CF_OEMTEXT) then OEMToChar(PAnsiChar(Txt), PChar(Txt));
           if DeleteCRLF then
           begin
             i := 1;

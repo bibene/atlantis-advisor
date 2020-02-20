@@ -21,14 +21,14 @@ unit MemoEx;
 {$ENDIF}
 
 {$IFNDEF DELPHI4PLUS}
-error: delphi4+ needed to compile this unit
+//error: delphi4+ needed to compile this unit
 {$ENDIF}
 
 interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  ExtCtrls, StdCtrls, ClipBrd, MemoExScrollBar, MemoExXPCompat{$IFDEF VER140}, RTLConsts{$ENDIF};
+  ExtCtrls, StdCtrls, ClipBrd, MemoExScrollBar, MemoExXPCompat, RTLConsts;
 
 const
   WM_EDITCOMMAND = WM_USER + $101;
@@ -1473,14 +1473,16 @@ end;
 function ANSIChangeCase(const S: string): string;
 var
   i: integer;
-  Up: ANSIChar;
+  Up: Char;
 begin
   Result := S;
   for i := 1 to Length(Result) do
   begin
     Up := ANSIUpperCase(Result[i])[1];
-    if Result[i] = Up then Result[i] := ANSILowerCase(Result[i])[1]
-    else Result[i] := Up;
+    if Result[i] = Up then
+      Result[i] := ANSILowerCase(Result[i])[1]
+    else
+      Result[i] := Up;
   end;
 end;
 

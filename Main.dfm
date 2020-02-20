@@ -1,9 +1,9 @@
 object MainForm: TMainForm
   Left = 116
   Top = 100
-  Width = 684
-  Height = 468
   Caption = 'Atlantis Advisor'
+  ClientHeight = 670
+  ClientWidth = 1013
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,13 +23,15 @@ object MainForm: TMainForm
   PixelsPerInch = 96
   TextHeight = 13
   object InfoPanel: TPanel
-    Left = 469
+    Left = 806
     Top = 28
     Width = 207
-    Height = 394
+    Height = 642
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitLeft = -87
+    ExplicitHeight = 401
     object Label9: TLabel
       Left = 4
       Top = 100
@@ -41,16 +43,19 @@ object MainForm: TMainForm
       Left = 0
       Top = 0
       Width = 207
-      Height = 394
+      Height = 642
       ActivePage = tsUnit
       Align = alClient
       Images = ResForm.BtnImages
-      TabIndex = 1
       TabOrder = 0
       object tsRegion: TTabSheet
         HelpContext = 7
         Caption = 'Region'
         ImageIndex = 17
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object RegionInfoPanel: TPanel
           Left = 0
           Top = 0
@@ -296,14 +301,18 @@ object MainForm: TMainForm
           Left = 0
           Top = 149
           Width = 199
-          Height = 217
+          Height = 464
           ActivePage = ItemSheet
           Align = alClient
-          TabIndex = 0
           TabOrder = 1
           TabPosition = tpBottom
+          ExplicitHeight = 217
           object ItemSheet: TTabSheet
             Caption = 'Items'
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object TradePanel: TPanel
               Left = 0
               Top = 0
@@ -433,6 +442,10 @@ object MainForm: TMainForm
           object NoteSheet: TTabSheet
             Caption = 'Notes'
             ImageIndex = 1
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object NotesMemo: TMemo
               Left = 0
               Top = 45
@@ -469,6 +482,10 @@ object MainForm: TMainForm
       object tsUnit: TTabSheet
         HelpContext = 8
         Caption = 'Unit'
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 372
         object ItemSplit: TSplitter
           Left = 0
           Top = 185
@@ -479,28 +496,33 @@ object MainForm: TMainForm
         end
         object UnitPageSplit: TSplitter
           Left = 0
-          Top = 208
+          Top = 455
           Width = 199
           Height = 3
           Cursor = crVSplit
           Align = alBottom
+          ExplicitTop = 208
         end
         object UnitPControl: TPageControl
           Tag = 2
           Left = 0
-          Top = 211
+          Top = 458
           Width = 199
           Height = 155
           ActivePage = WeightSheet
           Align = alBottom
           DockSite = True
           MultiLine = True
-          TabIndex = 2
           TabOrder = 0
           TabPosition = tpBottom
+          ExplicitTop = 217
           object MsgSheet: TTabSheet
             Caption = 'Messages'
             ImageIndex = 2
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object MsgGrid: TPowerGrid
               Left = 0
               Top = 0
@@ -527,6 +549,10 @@ object MainForm: TMainForm
           object OrderSheet: TTabSheet
             Caption = 'Orders'
             ImageIndex = 3
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object Panel2: TPanel
               Left = 0
               Top = 0
@@ -559,8 +585,6 @@ object MainForm: TMainForm
                 ButtonHeight = 18
                 ButtonWidth = 19
                 Caption = 'ToolBar1'
-                EdgeBorders = []
-                Flat = True
                 Images = ResForm.SmallBtnList
                 TabOrder = 0
                 object btnCheckOrder: TToolButton
@@ -600,6 +624,10 @@ object MainForm: TMainForm
           object WeightSheet: TTabSheet
             Caption = 'Load'
             ImageIndex = 4
+            ExplicitLeft = 0
+            ExplicitTop = 0
+            ExplicitWidth = 0
+            ExplicitHeight = 0
             object MoveTypeLabel: TLabel
               Left = 61
               Top = 6
@@ -1163,12 +1191,11 @@ object MainForm: TMainForm
             ButtonHeight = 19
             ButtonWidth = 19
             Caption = 'FlagBar'
-            EdgeBorders = []
             Images = ResForm.FlagImages
             TabOrder = 2
             object GuardFlagBtn: TToolButton
               Left = 0
-              Top = 2
+              Top = 0
               Hint = 'On guard'
               AllowAllUp = True
               Caption = 'GuardFlagBtn'
@@ -1181,7 +1208,7 @@ object MainForm: TMainForm
             object ToolButton33: TToolButton
               Tag = 1
               Left = 19
-              Top = 2
+              Top = 0
               Hint = 'Taxing'
               AllowAllUp = True
               Caption = 'ToolButton33'
@@ -1194,7 +1221,7 @@ object MainForm: TMainForm
             object AvoidFlagBtn: TToolButton
               Tag = 2
               Left = 38
-              Top = 2
+              Top = 0
               Hint = 'Avoiding'
               AllowAllUp = True
               Caption = 'AvoidFlagBtn'
@@ -1207,7 +1234,7 @@ object MainForm: TMainForm
             object ToolButton35: TToolButton
               Tag = 3
               Left = 57
-              Top = 2
+              Top = 0
               Hint = 'Behind'
               AllowAllUp = True
               Caption = 'ToolButton35'
@@ -1220,7 +1247,7 @@ object MainForm: TMainForm
             object ToolButton36: TToolButton
               Tag = 4
               Left = 76
-              Top = 2
+              Top = 0
               Hint = 'Holding'
               AllowAllUp = True
               Caption = 'ToolButton36'
@@ -1233,7 +1260,7 @@ object MainForm: TMainForm
             object ToolButton37: TToolButton
               Tag = 5
               Left = 95
-              Top = 2
+              Top = 0
               Hint = 'Receive no aid'
               AllowAllUp = True
               Caption = 'ToolButton37'
@@ -1246,7 +1273,7 @@ object MainForm: TMainForm
             object ToolButton45: TToolButton
               Tag = 6
               Left = 114
-              Top = 2
+              Top = 0
               Hint = 'Will not cross water'
               AllowAllUp = True
               Caption = 'ToolButton45'
@@ -1258,7 +1285,7 @@ object MainForm: TMainForm
             end
             object ToolButton48: TToolButton
               Left = 133
-              Top = 2
+              Top = 0
               Width = 4
               Caption = 'ToolButton48'
               ImageIndex = 8
@@ -1266,7 +1293,7 @@ object MainForm: TMainForm
             end
             object btnConsume: TToolButton
               Left = 137
-              Top = 2
+              Top = 0
               Caption = 'btnConsume'
               ImageIndex = 7
               ParentShowHint = False
@@ -1276,7 +1303,7 @@ object MainForm: TMainForm
             object btnReveal: TToolButton
               Tag = 1
               Left = 156
-              Top = 2
+              Top = 0
               Caption = 'btnReveal'
               ImageIndex = 8
               ParentShowHint = False
@@ -1286,7 +1313,7 @@ object MainForm: TMainForm
             object btnSpoils: TToolButton
               Tag = 2
               Left = 175
-              Top = 2
+              Top = 0
               Caption = 'btnSpoils'
               ImageIndex = 9
               ParentShowHint = False
@@ -1299,7 +1326,7 @@ object MainForm: TMainForm
           Left = 0
           Top = 188
           Width = 199
-          Height = 20
+          Height = 267
           Align = alClient
           ColCount = 3
           DefaultRowColor = clBlack
@@ -1316,10 +1343,11 @@ object MainForm: TMainForm
           TopRow = 0
           OnDblClick = SkillGridDblClick
           OnMouseDown = SkillGridMouseDown
+          ExplicitHeight = 26
           ColWidths = (
             126
             25
-            31)
+            44)
         end
         object pItemGrid: TPanel
           Left = 0
@@ -1381,8 +1409,6 @@ object MainForm: TMainForm
               Height = 24
               Align = alNone
               Caption = 'MapToolbar'
-              EdgeBorders = []
-              Flat = True
               Images = ResForm.BtnImages
               ParentShowHint = False
               ShowHint = False
@@ -1453,6 +1479,10 @@ object MainForm: TMainForm
       object tsStruct: TTabSheet
         Caption = 'Object'
         ImageIndex = 1
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object StructNameBevel: TBevel
           Left = 3
           Top = 3
@@ -1708,51 +1738,56 @@ object MainForm: TMainForm
   object MapUnitsPanel: TPanel
     Left = 0
     Top = 28
-    Width = 469
-    Height = 394
+    Width = 806
+    Height = 642
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 461
+    ExplicitHeight = 401
     object UnitSplitter: TSplitter
       Left = 0
-      Top = 274
-      Width = 469
+      Top = 522
+      Width = 806
       Height = 6
       Cursor = crVSplit
       Align = alBottom
       Beveled = True
+      ExplicitTop = 274
+      ExplicitWidth = 469
     end
     object MapToolPanel: TPanel
       Left = 0
       Top = 0
-      Width = 469
+      Width = 806
       Height = 29
       HelpContext = 3
       Align = alTop
       TabOrder = 0
+      ExplicitWidth = 461
       object MapToolbar: TToolBar
         Left = 1
         Top = 1
-        Width = 420
+        Width = 757
         Height = 27
         Align = alClient
         ButtonHeight = 23
         Caption = 'MapToolbar'
-        EdgeBorders = []
         Images = ResForm.BtnImages
         ParentShowHint = False
         ShowHint = False
         TabOrder = 0
+        ExplicitWidth = 412
         object ToolButton4: TToolButton
           Left = 0
-          Top = 2
+          Top = 0
           Width = 8
           Caption = 'ToolButton4'
           Style = tbsSeparator
         end
         object ListBtn: TToolButton
           Left = 8
-          Top = 2
+          Top = 0
           Hint = 'Region List'
           AllowAllUp = True
           Caption = 'Region List'
@@ -1765,7 +1800,7 @@ object MainForm: TMainForm
         end
         object ListDownBtn: TSpeedButton
           Left = 31
-          Top = 2
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -1779,7 +1814,7 @@ object MainForm: TMainForm
         end
         object ToolButton31: TToolButton
           Left = 43
-          Top = 2
+          Top = 0
           Width = 8
           Caption = 'ToolButton31'
           ImageIndex = 32
@@ -1787,7 +1822,7 @@ object MainForm: TMainForm
         end
         object ToolButton30: TToolButton
           Left = 51
-          Top = 2
+          Top = 0
           Hint = 'Define List filter'
           Action = ListFilterAction
           ParentShowHint = False
@@ -1795,7 +1830,7 @@ object MainForm: TMainForm
         end
         object ToolButton5: TToolButton
           Left = 74
-          Top = 2
+          Top = 0
           Width = 11
           Caption = 'ToolButton5'
           ImageIndex = 20
@@ -1803,7 +1838,7 @@ object MainForm: TMainForm
         end
         object FogBtn: TToolButton
           Left = 85
-          Top = 2
+          Top = 0
           Hint = 'Fog Type'
           AllowAllUp = True
           Caption = 'Fog Type'
@@ -1816,7 +1851,7 @@ object MainForm: TMainForm
         object FogDownBtn: TSpeedButton
           Tag = 1
           Left = 108
-          Top = 2
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -1830,7 +1865,7 @@ object MainForm: TMainForm
         end
         object ToolButton6: TToolButton
           Left = 120
-          Top = 2
+          Top = 0
           Width = 8
           Caption = 'ToolButton6'
           ImageIndex = 21
@@ -1838,7 +1873,7 @@ object MainForm: TMainForm
         end
         object FlagBtn: TToolButton
           Left = 128
-          Top = 2
+          Top = 0
           Hint = 'Factions in Region'
           AllowAllUp = True
           Caption = 'Factions in Region'
@@ -1851,7 +1886,7 @@ object MainForm: TMainForm
         object FlagDownBtn: TSpeedButton
           Tag = 2
           Left = 151
-          Top = 2
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -1865,7 +1900,7 @@ object MainForm: TMainForm
         end
         object ToolButton11: TToolButton
           Left = 163
-          Top = 2
+          Top = 0
           Width = 8
           Caption = 'ToolButton11'
           ImageIndex = 25
@@ -1873,7 +1908,7 @@ object MainForm: TMainForm
         end
         object MIcBtn: TToolButton
           Left = 171
-          Top = 2
+          Top = 0
           Hint = 'Event Icons'
           Caption = 'Event Icons'
           ImageIndex = 13
@@ -1885,7 +1920,7 @@ object MainForm: TMainForm
         object MIcDownBtn: TSpeedButton
           Tag = 3
           Left = 194
-          Top = 2
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -1898,17 +1933,16 @@ object MainForm: TMainForm
           OnClick = DownBtnClick
         end
         object ToolButton13: TToolButton
-          Left = 0
-          Top = 2
+          Left = 206
+          Top = 0
           Width = 8
           Caption = 'ToolButton13'
           ImageIndex = 26
-          Wrap = True
           Style = tbsSeparator
         end
         object SIcBtn: TToolButton
-          Left = 0
-          Top = 30
+          Left = 214
+          Top = 0
           Hint = 'Status Icon'
           Caption = 'Status Icon'
           ImageIndex = 14
@@ -1919,8 +1953,8 @@ object MainForm: TMainForm
         end
         object SIcDownBtn: TSpeedButton
           Tag = 4
-          Left = 23
-          Top = 30
+          Left = 237
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -1933,16 +1967,16 @@ object MainForm: TMainForm
           OnClick = DownBtnClick
         end
         object ToolButton15: TToolButton
-          Left = 35
-          Top = 30
+          Left = 249
+          Top = 0
           Width = 8
           Caption = 'ToolButton15'
           ImageIndex = 27
           Style = tbsSeparator
         end
         object STxBtn: TToolButton
-          Left = 43
-          Top = 30
+          Left = 257
+          Top = 0
           Hint = 'Status Text'
           Caption = 'Status Text'
           ImageIndex = 15
@@ -1953,8 +1987,8 @@ object MainForm: TMainForm
         end
         object STxDownBtn: TSpeedButton
           Tag = 5
-          Left = 66
-          Top = 30
+          Left = 280
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -1967,16 +2001,16 @@ object MainForm: TMainForm
           OnClick = DownBtnClick
         end
         object ToolButton17: TToolButton
-          Left = 78
-          Top = 30
+          Left = 292
+          Top = 0
           Width = 8
           Caption = 'ToolButton17'
           ImageIndex = 28
           Style = tbsSeparator
         end
         object StructBtn: TToolButton
-          Left = 86
-          Top = 30
+          Left = 300
+          Top = 0
           Hint = 'Objects'
           Caption = 'Objects'
           ImageIndex = 1
@@ -1987,8 +2021,8 @@ object MainForm: TMainForm
         end
         object StructDownBtn: TSpeedButton
           Tag = 8
-          Left = 109
-          Top = 30
+          Left = 323
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -2001,16 +2035,16 @@ object MainForm: TMainForm
           OnClick = DownBtnClick
         end
         object ToolButton19: TToolButton
-          Left = 121
-          Top = 30
+          Left = 335
+          Top = 0
           Width = 8
           Caption = 'ToolButton19'
           ImageIndex = 9
           Style = tbsSeparator
         end
         object LevelBtn: TToolButton
-          Left = 129
-          Top = 30
+          Left = 343
+          Top = 0
           Hint = 'Level'
           Action = LevelAction
           AllowAllUp = True
@@ -2019,8 +2053,8 @@ object MainForm: TMainForm
         end
         object LevelDownBtn: TSpeedButton
           Tag = 6
-          Left = 152
-          Top = 30
+          Left = 366
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -2033,16 +2067,16 @@ object MainForm: TMainForm
           OnClick = DownBtnClick
         end
         object ToolButton7: TToolButton
-          Left = 164
-          Top = 30
+          Left = 378
+          Top = 0
           Width = 8
           Caption = 'ToolButton7'
           ImageIndex = 17
           Style = tbsSeparator
         end
         object BookmarkBtn: TToolButton
-          Left = 172
-          Top = 30
+          Left = 386
+          Top = 0
           Hint = 'Bookmark'
           Action = BookmarkAction
           ImageIndex = 34
@@ -2051,8 +2085,8 @@ object MainForm: TMainForm
         end
         object BmkDownBtn: TSpeedButton
           Tag = 7
-          Left = 195
-          Top = 30
+          Left = 409
+          Top = 0
           Width = 12
           Height = 23
           Glyph.Data = {
@@ -2066,7 +2100,7 @@ object MainForm: TMainForm
         end
       end
       object CoordLabel: TPanel
-        Left = 421
+        Left = 758
         Top = 1
         Width = 47
         Height = 27
@@ -2075,22 +2109,25 @@ object MainForm: TMainForm
         BevelOuter = bvNone
         Caption = '256, 256'
         TabOrder = 1
+        ExplicitLeft = 413
       end
     end
     object UnitsPanel: TPanel
       Left = 0
-      Top = 280
-      Width = 469
+      Top = 528
+      Width = 806
       Height = 114
       HelpContext = 5
       Align = alBottom
       BevelOuter = bvNone
       Constraints.MinHeight = 30
       TabOrder = 1
+      ExplicitTop = 287
+      ExplicitWidth = 461
       object UnitGrid: TPowerGrid
         Left = 0
         Top = 30
-        Width = 469
+        Width = 806
         Height = 84
         Align = alClient
         Color = clBlack
@@ -2110,6 +2147,7 @@ object MainForm: TMainForm
         OnDragOver = UnitGridDragOver
         OnMouseDown = UnitGridMouseDown
         OnSelectCell = UnitGridSelectCell
+        ExplicitWidth = 461
         ColWidths = (
           64
           64
@@ -2131,37 +2169,36 @@ object MainForm: TMainForm
       object tbUnitTools: TToolBar
         Left = 0
         Top = 0
-        Width = 469
+        Width = 806
         Height = 30
         BorderWidth = 1
         Caption = 'tbUnitTools'
-        EdgeBorders = []
         EdgeInner = esNone
         EdgeOuter = esNone
         Images = ResForm.BtnImages
         ParentShowHint = False
         ShowHint = True
         TabOrder = 1
+        ExplicitWidth = 461
         object ToolButton38: TToolButton
           Left = 0
-          Top = 2
+          Top = 0
           Width = 8
           Caption = 'ToolButton38'
           Style = tbsSeparator
         end
         object cmFilterFaction: TComboBox
           Left = 8
-          Top = 2
+          Top = 0
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 13
           TabOrder = 0
           OnChange = cmFilterFactionChange
         end
         object ToolButton39: TToolButton
           Left = 153
-          Top = 2
+          Top = 0
           Width = 8
           Caption = 'ToolButton39'
           ImageIndex = 0
@@ -2169,7 +2206,7 @@ object MainForm: TMainForm
         end
         object btnMyFaction: TToolButton
           Left = 161
-          Top = 2
+          Top = 0
           Hint = 'Player'#39's faction'
           Caption = 'btnMyFaction'
           ImageIndex = 11
@@ -2177,7 +2214,7 @@ object MainForm: TMainForm
         end
         object btnAllFactions: TToolButton
           Left = 184
-          Top = 2
+          Top = 0
           Hint = 'All factions'
           Caption = 'btnAllFactions'
           ImageIndex = 12
@@ -2185,7 +2222,7 @@ object MainForm: TMainForm
         end
         object ToolButton51: TToolButton
           Left = 207
-          Top = 2
+          Top = 0
           Width = 22
           Caption = 'ToolButton51'
           ImageIndex = 2
@@ -2193,23 +2230,23 @@ object MainForm: TMainForm
         end
         object btnFactionMode: TToolButton
           Left = 229
-          Top = 2
+          Top = 0
           Hint = 'Faction Mode'
           Action = GridModeAction
         end
         object btnUnitFilter: TToolButton
           Left = 252
-          Top = 2
+          Top = 0
           Action = UnitFilterAction
         end
         object ToolButton44: TToolButton
           Left = 275
-          Top = 2
+          Top = 0
           Action = FindUnitAction
         end
         object ToolButton49: TToolButton
           Left = 298
-          Top = 2
+          Top = 0
           Width = 8
           Caption = 'ToolButton49'
           ImageIndex = 1
@@ -2217,7 +2254,7 @@ object MainForm: TMainForm
         end
         object ToolButton52: TToolButton
           Left = 306
-          Top = 2
+          Top = 0
           Action = NextErrorAction
         end
       end
@@ -2225,24 +2262,25 @@ object MainForm: TMainForm
     object MapPanel: TPanel
       Left = 0
       Top = 29
-      Width = 469
-      Height = 245
+      Width = 806
+      Height = 493
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 2
+      ExplicitWidth = 461
+      ExplicitHeight = 252
       object StructSplitter: TSplitter
         Left = 145
         Top = 0
-        Width = 3
-        Height = 245
-        Cursor = crHSplit
+        Height = 493
         Beveled = True
+        ExplicitHeight = 245
       end
       object HexMap: TCylinderMap
         Left = 148
         Top = 0
-        Width = 32
-        Height = 245
+        Width = 369
+        Height = 493
         HelpContext = 3
         Align = alClient
         Color = clBlack
@@ -2260,12 +2298,14 @@ object MainForm: TMainForm
         OnMouseUp = HexMapMouseUp
         OnSelectHex = HexMapSelectHex
         OnMoveMap = HexMapMoveMap
+        ExplicitWidth = 24
+        ExplicitHeight = 252
       end
       object StructGrid: TPowerGrid
         Left = 0
         Top = 0
         Width = 145
-        Height = 245
+        Height = 493
         Align = alLeft
         Color = clBtnFace
         ColCount = 2
@@ -2285,15 +2325,16 @@ object MainForm: TMainForm
         OnDrawCell = StructGridDrawCell
         OnMouseDown = StructGridMouseDown
         OnMouseMove = StructGridMouseMove
+        ExplicitHeight = 252
         ColWidths = (
           2
           139)
       end
       object gAllItems: TPowerGrid
-        Left = 180
+        Left = 517
         Top = 0
         Width = 289
-        Height = 245
+        Height = 493
         Align = alRight
         ColCount = 3
         DefaultRowColor = clBlack
@@ -2313,6 +2354,8 @@ object MainForm: TMainForm
         OnEnter = ItemGridEnter
         OnMouseDown = ItemGridMouseDown
         OnSelectCell = ItemGridSelectCell
+        ExplicitLeft = 172
+        ExplicitHeight = 252
         ColWidths = (
           50
           133
@@ -2323,10 +2366,11 @@ object MainForm: TMainForm
   object ToolPanel: TPanel
     Left = 0
     Top = 0
-    Width = 676
+    Width = 1013
     Height = 28
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 120
     object ToolBar: TToolBar
       Left = 33
       Top = 1
@@ -2334,14 +2378,13 @@ object MainForm: TMainForm
       Height = 25
       Align = alNone
       Caption = 'ToolBar'
-      EdgeBorders = []
       Images = ResForm.BtnImages
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
       object ToolButton10: TToolButton
         Left = 0
-        Top = 2
+        Top = 0
         Hint = 'View Order'
         Action = OrdersAction
         ParentShowHint = False
@@ -2349,7 +2392,7 @@ object MainForm: TMainForm
       end
       object ToolButton24: TToolButton
         Left = 23
-        Top = 2
+        Top = 0
         Hint = 'Save Order'
         Action = SaveOrderAction
         ParentShowHint = False
@@ -2357,7 +2400,7 @@ object MainForm: TMainForm
       end
       object ToolButton25: TToolButton
         Left = 46
-        Top = 2
+        Top = 0
         Hint = 'Copy Order to Clipboard'
         Action = CopyOrderAction
         ParentShowHint = False
@@ -2365,7 +2408,7 @@ object MainForm: TMainForm
       end
       object ToolButton46: TToolButton
         Left = 69
-        Top = 2
+        Top = 0
         Hint = 'Send Order'
         Action = MailOrderAction
         ParentShowHint = False
@@ -2373,7 +2416,7 @@ object MainForm: TMainForm
       end
       object ToolButton12: TToolButton
         Left = 92
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ToolButton12'
         ImageIndex = 47
@@ -2381,7 +2424,7 @@ object MainForm: TMainForm
       end
       object ToolButton8: TToolButton
         Left = 100
-        Top = 2
+        Top = 0
         Hint = 'Factions'
         Action = FactionAction
         ParentShowHint = False
@@ -2389,7 +2432,7 @@ object MainForm: TMainForm
       end
       object ToolButton23: TToolButton
         Left = 123
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ToolButton23'
         ImageIndex = 28
@@ -2397,22 +2440,22 @@ object MainForm: TMainForm
       end
       object ToolButton1: TToolButton
         Left = 131
-        Top = 2
+        Top = 0
         Action = ItemEditAction
       end
       object ToolButton2: TToolButton
         Left = 154
-        Top = 2
+        Top = 0
         Action = SkillEditAction
       end
       object ToolButton14: TToolButton
         Left = 177
-        Top = 2
+        Top = 0
         Action = StructEditAction
       end
       object ToolButton27: TToolButton
         Left = 200
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ToolButton27'
         ImageIndex = 43
@@ -2420,7 +2463,7 @@ object MainForm: TMainForm
       end
       object ToolButton47: TToolButton
         Left = 208
-        Top = 2
+        Top = 0
         Hint = 'Scripts'
         Action = ScriptEditAction
         ParentShowHint = False
@@ -2428,7 +2471,7 @@ object MainForm: TMainForm
       end
       object ScriptSplit: TToolButton
         Left = 231
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ScriptSplit'
         ImageIndex = 47
@@ -2436,7 +2479,7 @@ object MainForm: TMainForm
       end
       object ToolButton9: TToolButton
         Left = 239
-        Top = 2
+        Top = 0
         Hint = 'Turn Events'
         Action = TurnEventsAction
         ParentShowHint = False
@@ -2444,7 +2487,7 @@ object MainForm: TMainForm
       end
       object ToolButton43: TToolButton
         Left = 262
-        Top = 2
+        Top = 0
         Hint = 'Advisor Warnings'
         Action = AdvisorWarnAction
         ParentShowHint = False
@@ -2452,7 +2495,7 @@ object MainForm: TMainForm
       end
       object ToolButton50: TToolButton
         Left = 285
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ToolButton50'
         ImageIndex = 47
@@ -2460,7 +2503,7 @@ object MainForm: TMainForm
       end
       object ToolButton32: TToolButton
         Left = 293
-        Top = 2
+        Top = 0
         Hint = 'Battles in Region'
         Action = BattlesAction
         ParentShowHint = False
@@ -2468,12 +2511,12 @@ object MainForm: TMainForm
       end
       object ToolButton16: TToolButton
         Left = 316
-        Top = 2
+        Top = 0
         Action = TradeStructAction
       end
       object ToolButton28: TToolButton
         Left = 339
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ToolButton28'
         ImageIndex = 24
@@ -2481,7 +2524,7 @@ object MainForm: TMainForm
       end
       object ToolButton42: TToolButton
         Left = 347
-        Top = 2
+        Top = 0
         Hint = 'Soldiers in Unit'
         Action = SoldiersAction
         ParentShowHint = False
@@ -2489,12 +2532,12 @@ object MainForm: TMainForm
       end
       object ToolButton34: TToolButton
         Left = 370
-        Top = 2
+        Top = 0
         Action = UnitProductionAction
       end
       object ToolButton41: TToolButton
         Left = 393
-        Top = 2
+        Top = 0
         Hint = 'Make Unit Avatar'
         Action = MakeAvatarAction
         ParentShowHint = False
@@ -2502,7 +2545,7 @@ object MainForm: TMainForm
       end
       object ToolButton40: TToolButton
         Left = 416
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ToolButton40'
         ImageIndex = 47
@@ -2510,7 +2553,7 @@ object MainForm: TMainForm
       end
       object ToolButton26: TToolButton
         Left = 424
-        Top = 2
+        Top = 0
         Hint = 'Mini Map'
         Action = MiniMapAction
         ParentShowHint = False
@@ -2518,7 +2561,7 @@ object MainForm: TMainForm
       end
       object ToolButton29: TToolButton
         Left = 447
-        Top = 2
+        Top = 0
         Width = 22
         Caption = 'ToolButton29'
         ImageIndex = 48
@@ -2526,7 +2569,7 @@ object MainForm: TMainForm
       end
       object ToolButton18: TToolButton
         Left = 469
-        Top = 2
+        Top = 0
         Hint = 'Previous Turn'
         Action = PrevTurnAction
         ParentShowHint = False
@@ -2534,7 +2577,7 @@ object MainForm: TMainForm
       end
       object ToolButton21: TToolButton
         Left = 492
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ToolButton21'
         ImageIndex = 43
@@ -2542,17 +2585,16 @@ object MainForm: TMainForm
       end
       object TurnCombo: TComboBox
         Left = 500
-        Top = 2
+        Top = 0
         Width = 61
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
         TabOrder = 0
         OnChange = TurnComboChange
       end
       object ToolButton22: TToolButton
         Left = 561
-        Top = 2
+        Top = 0
         Width = 8
         Caption = 'ToolButton22'
         ImageIndex = 43
@@ -2560,7 +2602,7 @@ object MainForm: TMainForm
       end
       object ToolButton20: TToolButton
         Left = 569
-        Top = 2
+        Top = 0
         Hint = 'Next Turn'
         Action = NextTurnAction
         ParentShowHint = False
@@ -2568,13 +2610,14 @@ object MainForm: TMainForm
       end
     end
     object Panel3: TPanel
-      Left = 629
+      Left = 966
       Top = 1
       Width = 46
       Height = 26
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 73
       DesignSize = (
         46
         26)
@@ -2626,12 +2669,11 @@ object MainForm: TMainForm
       Align = alNone
       ButtonHeight = 23
       Caption = 'ToolBar3'
-      EdgeBorders = []
       Images = ResForm.BtnImages
       TabOrder = 2
       object ToolButton3: TToolButton
         Left = 0
-        Top = 2
+        Top = 0
         Action = ManagerAction
       end
     end

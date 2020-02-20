@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, IntEdit, Resources, Mask, ToolEdit;
+  Dialogs, StdCtrls, IntEdit, Resources, Mask; //, ToolEdit;
 
 type
   TManagerOptionsForm = class(TForm)
@@ -12,7 +12,7 @@ type
     Button2: TButton;
     GroupBox1: TGroupBox;
     Label18: TLabel;
-    eEngineFile: TFilenameEdit;
+    eEngineFile: TEdit;
     GroupBox2: TGroupBox;
     Label2: TLabel;
     KeepEdit: TIntEdit;

@@ -85,7 +85,6 @@ object ManagerForm: TManagerForm
         Width = 161
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
         TabOrder = 0
         OnChange = GameComboChange
       end
@@ -96,10 +95,6 @@ object ManagerForm: TManagerForm
         Height = 22
         Hint = 'New Game'
         Caption = 'New Game'
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 1
-        OnClick = NewGameBtnClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           18000000000000030000CE0E0000C40E00000000000000000000FF00FFFF00FF
@@ -128,6 +123,10 @@ object ManagerForm: TManagerForm
           80808080FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
           00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
         Margin = 1
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+        OnClick = NewGameBtnClick
       end
       object KillBtn: TBitBtn
         Left = 284
@@ -136,10 +135,6 @@ object ManagerForm: TManagerForm
         Height = 22
         Hint = 'Kill Game'
         Caption = 'Kill Game'
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 2
-        OnClick = KillBtnClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           18000000000000030000CE0E0000C40E00000000000000000000FF00FFFF00FF
@@ -168,6 +163,10 @@ object ManagerForm: TManagerForm
           FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
           00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
         Margin = 1
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 2
+        OnClick = KillBtnClick
       end
       object RenameBtn: TBitBtn
         Left = 260
@@ -176,10 +175,6 @@ object ManagerForm: TManagerForm
         Height = 22
         Hint = 'Rename Game'
         Caption = 'Rename'
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 3
-        OnClick = RenameBtnClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           18000000000000030000CE0E0000C40E00000000000000000000FF00FFFF00FF
@@ -208,6 +203,10 @@ object ManagerForm: TManagerForm
           FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
           00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
         Margin = 1
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+        OnClick = RenameBtnClick
       end
     end
     object RepGrid: TPowerGrid
@@ -241,8 +240,6 @@ object ManagerForm: TManagerForm
       Width = 92
       Height = 22
       Caption = 'Add Reports'
-      TabOrder = 2
-      OnClick = AddBtnClick
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000CE0E0000C40E00000000000000000000C0C0C0C0C0C0
@@ -271,6 +268,8 @@ object ManagerForm: TManagerForm
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0808080808080808080C0C0C0C0C0C0C0
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
       Margin = 2
+      TabOrder = 2
+      OnClick = AddBtnClick
     end
     object PasteBtn: TBitBtn
       Left = 232
@@ -278,8 +277,6 @@ object ManagerForm: TManagerForm
       Width = 92
       Height = 22
       Caption = 'Paste Report'
-      TabOrder = 3
-      OnClick = PasteBtnClick
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000CE0E0000C40E00000000000000000000FF00FFFF00FF
@@ -308,6 +305,8 @@ object ManagerForm: TManagerForm
         FFFF00FFFF00FFFF00FF000000000000000000000000000000FF00FFFF00FFFF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       Margin = 2
+      TabOrder = 3
+      OnClick = PasteBtnClick
     end
     object DelBtn: TBitBtn
       Left = 232
@@ -315,8 +314,6 @@ object ManagerForm: TManagerForm
       Width = 92
       Height = 22
       Caption = 'Del Report'
-      TabOrder = 4
-      OnClick = DelBtnClick
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000CE0E0000C40E00000000000000000000C0C0C0C0C0C0
@@ -345,6 +342,8 @@ object ManagerForm: TManagerForm
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
       Margin = 2
+      TabOrder = 4
+      OnClick = DelBtnClick
     end
     object ReadBtn: TBitBtn
       Left = 232
@@ -352,8 +351,6 @@ object ManagerForm: TManagerForm
       Width = 92
       Height = 22
       Caption = 'Read List'
-      TabOrder = 5
-      OnClick = ReadBtnClick
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000CE0E0000C40E00000000000000000000FF00FFFF00FF
@@ -382,14 +379,14 @@ object ManagerForm: TManagerForm
         FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       Margin = 2
+      TabOrder = 5
+      OnClick = ReadBtnClick
     end
     object ProgressBar: TProgressBar
       Left = 232
       Top = 172
       Width = 92
       Height = 6
-      Min = 0
-      Max = 100
       Smooth = True
       TabOrder = 6
     end
@@ -400,9 +397,6 @@ object ManagerForm: TManagerForm
       Height = 22
       Caption = 'Read && Close'
       Default = True
-      ModalResult = 1
-      TabOrder = 7
-      OnClick = ReadCloseBtnClick
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000CE0E0000C40E00000000000000000000FF00FFFF00FF
@@ -431,6 +425,9 @@ object ManagerForm: TManagerForm
         FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       Margin = 2
+      ModalResult = 1
+      TabOrder = 7
+      OnClick = ReadCloseBtnClick
     end
     object CloseBtn: TBitBtn
       Left = 232
@@ -438,8 +435,6 @@ object ManagerForm: TManagerForm
       Width = 92
       Height = 22
       Caption = 'Close'
-      ModalResult = 2
-      TabOrder = 8
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000CE0E0000C40E00000000000000000000C0C0C0C0C0C0
@@ -468,6 +463,8 @@ object ManagerForm: TManagerForm
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
       Margin = 2
+      ModalResult = 2
+      TabOrder = 8
     end
     object btnOptions: TBitBtn
       Left = 232
@@ -475,8 +472,6 @@ object ManagerForm: TManagerForm
       Width = 92
       Height = 22
       Caption = 'Options'
-      TabOrder = 9
-      OnClick = btnOptionsClick
       Glyph.Data = {
         36030000424D3603000000000000360000002800000010000000100000000100
         18000000000000030000CE0E0000C40E00000000000000000000C0C0C0C0C0C0
@@ -505,6 +500,8 @@ object ManagerForm: TManagerForm
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
         C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0}
       Margin = 2
+      TabOrder = 9
+      OnClick = btnOptionsClick
     end
   end
   object Panel2: TPanel

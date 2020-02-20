@@ -1,9 +1,9 @@
 object ScriptEditForm: TScriptEditForm
   Left = 203
   Top = 106
-  Width = 550
-  Height = 450
   Caption = 'Scripts'
+  ClientHeight = 411
+  ClientWidth = 534
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object ScriptEditForm: TScriptEditForm
   object Edit: TMemoEx
     Left = 0
     Top = 29
-    Width = 542
-    Height = 394
+    Width = 534
+    Height = 382
     Cursor = crIBeam
     TabOrder = 0
     GutterWidth = 25
@@ -58,24 +58,23 @@ object ScriptEditForm: TScriptEditForm
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 542
+    Width = 534
     Height = 29
     Caption = 'ToolBar1'
-    EdgeBorders = []
     Images = ResForm.BtnImages
     ParentShowHint = False
     ShowHint = True
     TabOrder = 1
     object ToolButton1: TToolButton
       Left = 0
-      Top = 2
+      Top = 0
       Width = 8
       Caption = 'ToolButton1'
       Style = tbsSeparator
     end
     object btnSave: TToolButton
       Left = 8
-      Top = 2
+      Top = 0
       Hint = 'Save Scripts'
       Caption = 'btnSave'
       ImageIndex = 58

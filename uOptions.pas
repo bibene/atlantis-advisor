@@ -5,8 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, ExtCtrls, ComCtrls, Resources, DataStructs, IniFiles,
-  uKeys, MyStrings, Grids, PowerGrid, ColorBtn, CheckLst, uGameSubs,
-  IntEdit, Buttons, uExport, Spin, Math, uShortcuts, Menus;
+  uKeys, MyStrings, Grids, ColorBtn, CheckLst, uGameSubs,
+  IntEdit, Buttons, uExport, Spin, Math, uShortcuts, Menus, PowerGrid;
 
 type
   TOptionForm = class(TForm)
